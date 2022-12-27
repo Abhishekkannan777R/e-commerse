@@ -1,0 +1,34 @@
+<section>
+    
+        <div class="container">
+            
+        <h1 class="text-center">Add Product </h1>
+        <form action="/update" method="POST">
+        
+    <input type="hidden" value="{{data.id}}"name="id">
+  <div class="form-group">
+    <label >Name</label>
+    <input type="text" class="form-control "name="name" value="{{data.name}}">
+  </div>
+  <div class="form-group">
+    <label >Category</label>
+    <input type="text" class="form-control" name="category"value="{{data.category}}">
+  </div>
+  <div class="form-group">
+    
+    <label >Price</label>
+    <input type="text" class="form-control" name="price"value="{{data.price}}">
+  </div>
+  <div class="form-group">
+    <label >Discription</label>
+    <input type="text" class="form-control" name="discription"value="{{data.discription}}" >
+  </div>
+  <div class="form-group">
+    <label >Image</label>
+    <input type="file" class="form-control" name="image"> <img style="width:50px;height:50px;" src="http://localhost:3000/images/{{data.id}}.jpg"alt="" >
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+</section>

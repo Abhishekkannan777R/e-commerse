@@ -1,0 +1,30 @@
+<style>
+.card:hover{
+    transform: scale(1.1);
+    z-index: 1;
+  }
+</style>
+ <section>
+    <div class="container mt-3">
+      <div class="row" >
+    {{#each data}}
+        <div class="col-md-3 p-2">
+          <div class="card" style="width: 15rem;border-radius:6px ;box-shadow: -2px 5px 5px rgb(73, 73, 73); ">
+            <img class="card-img-top"style="width:14em;height:154px;"src="http://localhost:3000/images/{{this.id}}.jpg">
+            <div class="card-body">
+              <h5 class="card-title">{{this.name}}</h5>
+              <p class="card-text">{{this.category}}</p>
+              <p class="card-text">{{this.price}}</p>
+              <p class="card-text">{{this.discription}}</p>
+              <a href="/addtocart/{{this.id}}" class="btn btn-primary" >Add to cart</a>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+</svg>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+        </div>
+    </div>
+    
+  </section>
